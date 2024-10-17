@@ -1,0 +1,10 @@
+version: '3'
+services:
+  kafka: 
+    image: confluentinc/cp-kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: 192.168.29.65:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.29.65:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
